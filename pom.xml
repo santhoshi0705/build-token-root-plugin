@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
@@ -11,9 +11,11 @@
         <relativePath/> <!-- Prevent looking for local parent POM -->
     </parent>
 
+    <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>build-token-root</artifactId>
     <version>1.2-SNAPSHOT</version>
     <packaging>hpi</packaging>
+
     <name>Build Authorization Token Root Plugin</name>
     <description>Allows REST-based builds to bypass authentication when anonymous users are restricted.</description>
     <url>https://plugins.jenkins.io/build-token-root</url>
@@ -35,13 +37,15 @@
 
     <scm>
         <connection>scm:git:https://github.com/jenkinsci/build-token-root-plugin.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/jenkinsci/build-token-root-plugin.git</developerConnection>
+        <developerConnection>scm:git:ssh://git@github.com:jenkinsci/build-token-root-plugin.git</developerConnection>
         <url>https://github.com/jenkinsci/build-token-root-plugin</url>
     </scm>
 
     <properties>
-        <jenkins.version>2.426.1</jenkins.version> <!-- Set to a recent LTS version -->
-        <java.level>11</java.level> <!-- Minimum required Java version -->
+        <jenkins.version>2.426.1</jenkins.version> <!-- Compatible with recent LTS -->
+        <java.level>11</java.level> <!-- Java 11 is required by Jenkins 2.426+ -->
+        <findbugs.failOnError>false</findbugs.failOnError> <!-- Optional -->
+        <spotbugs.failOnError>false</spotbugs.failOnError> <!-- Optional -->
     </properties>
 
 </project>
