@@ -8,10 +8,10 @@
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
         <version>4.55</version>
-        <relativePath/> <!-- Prevent looking for local parent POM -->
+        <relativePath/> <!-- Don't try to resolve locally -->
     </parent>
 
-    <groupId>org.jenkins-ci.plugins</groupId>
+    <groupId>io.jenkins.plugins</groupId>
     <artifactId>build-token-root</artifactId>
     <version>1.2-SNAPSHOT</version>
     <packaging>hpi</packaging>
@@ -29,23 +29,21 @@
 
     <developers>
         <developer>
-            <id>jglick</id>
-            <name>Jesse Glick</name>
-            <email>jglick@cloudbees.com</email>
+            <id>santhoshi0705</id>
+            <name>Santhoshi</name>
+            <email>your.email@example.com</email>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/jenkinsci/build-token-root-plugin.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:jenkinsci/build-token-root-plugin.git</developerConnection>
-        <url>https://github.com/jenkinsci/build-token-root-plugin</url>
+        <connection>scm:git:https://github.com/santhoshi0705/build-token-root-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:santhoshi0705/build-token-root-plugin.git</developerConnection>
+        <url>https://github.com/santhoshi0705/build-token-root-plugin</url>
     </scm>
 
     <properties>
-        <jenkins.version>2.426.1</jenkins.version> <!-- Compatible with recent LTS -->
-        <java.level>11</java.level> <!-- Java 11 is required by Jenkins 2.426+ -->
-        <findbugs.failOnError>false</findbugs.failOnError> <!-- Optional -->
-        <spotbugs.failOnError>false</spotbugs.failOnError> <!-- Optional -->
+        <jenkins.version>2.426.1</jenkins.version>
+        <java.level>11</java.level>
     </properties>
 
 </project>
