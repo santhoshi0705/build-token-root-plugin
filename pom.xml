@@ -1,22 +1,30 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>1.480.3</version>
+        <version>4.55</version>
+        <relativePath/> <!-- Prevent looking for local parent POM -->
     </parent>
+
     <artifactId>build-token-root</artifactId>
     <version>1.2-SNAPSHOT</version>
     <packaging>hpi</packaging>
     <name>Build Authorization Token Root Plugin</name>
-    <description>Lets build and related REST build triggers be accessed even when anonymous users cannot see Jenkins.</description>
-    <url>https://wiki.jenkins-ci.org/display/JENKINS/Build+Token+Root+Plugin</url>
+    <description>Allows REST-based builds to bypass authentication when anonymous users are restricted.</description>
+    <url>https://plugins.jenkins.io/build-token-root</url>
+
     <licenses>
         <license>
             <name>MIT License</name>
-            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <url>https://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
+
     <developers>
         <developer>
             <id>jglick</id>
@@ -24,21 +32,16 @@
             <email>jglick@cloudbees.com</email>
         </developer>
     </developers>
-    <repositories>
-        <repository>
-            <id>repo.jenkins-ci.org</id>
-            <url>http://repo.jenkins-ci.org/public/</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>repo.jenkins-ci.org</id>
-            <url>http://repo.jenkins-ci.org/public/</url>
-        </pluginRepository>
-    </pluginRepositories>
+
     <scm>
-        <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
-        <url>http://github.com/jenkinsci/${project.artifactId}-plugin</url>
+        <connection>scm:git:https://github.com/jenkinsci/build-token-root-plugin.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/jenkinsci/build-token-root-plugin.git</developerConnection>
+        <url>https://github.com/jenkinsci/build-token-root-plugin</url>
     </scm>
+
+    <properties>
+        <jenkins.version>2.426.1</jenkins.version> <!-- Set to a recent LTS version -->
+        <java.level>11</java.level> <!-- Minimum required Java version -->
+    </properties>
+
 </project>
